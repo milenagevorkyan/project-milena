@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+  resize: none;
+}
+@font-face {
+  font-family: myfont;
+  src: url(./fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: myfont2;
+  src: url(./fonts/Arimo-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: myfont3;
+  src: url(./fonts/Raleway-VariableFont_wght.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(241, 241, 227);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+.lineburger {
+  width: 40px;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+}
+
+#chek {
+  display: none;
+}
+#chek:checked ~ nav {
+  display: flex;
+}
+#chek:checked + label .burger .lineburger:nth-child(2) {
+  display: none;
+}
+#chek:checked + label .burger .lineburger:nth-child(1) {
+  transform: rotate(45deg) translate(7px);
+  transition: 0.5s;
+}
+#chek:checked + label .burger .lineburger:nth-child(3) {
+  transform: rotate(-45deg) translate(5px);
+  transition: 0.5s;
+}
+#chek:checked ~ nav ul {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  padding: 30px;
+  gap: 50px;
+  background-color: rgb(241, 241, 227);
+}
+
+#chek:checked ~ nav {
+  position: fixed;
+  top: 310px;
+  /* right: 20px; */
+  background-color: rgb(241, 241, 227);
+  width: 100%;
+  z-index: 5;
+  margin-top: 110px;
+}
+
+.logo {
+  /* width: 70%; */
+  height: 70px;
+  /* background-color: red; */
+  display: flex;
+  margin-left: 40px;
+}
+
+.child {
+  display: flex;
+  align-items: center;
+}
+.child a {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e3221;
+}
+nav {
+  /* width: 30%; */
+  height: 70px;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+li {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e3221;
+}
+i {
+  font-size: x-large;
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(241, 241, 227);
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-footer {
+  width: 50%;
+  height: 50vh;
+  /* background-color: yellow; */
+  display: flex;
+  flex-grow: 1;
+  min-width: 320px;
+}
+.left-carter {
+  width: 50%;
+  height: 50vh;
+  /* background-color: red; */
+  padding: 30px;
+  font-size: 40px;
+}
+
+.right-info {
+  /* width: 50%; */
+  height: 50vh;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-size: 20px;
+  padding-bottom: 60px;
+}
+.line-footer {
+  width: 200px;
+  height: 1px;
+  background-color: gray;
+}
+.foot-number {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.right-footer {
+  width: 50%;
+  background-color: rgb(241, 241, 227);
+  display: flex;
+  justify-content: end;
+  flex-grow: 1;
+  min-width: 300px;
+  flex-grow: 1;
+  min-width: 200px;
+}
+.div-footer {
+  /* width: 40%; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  font-size: 20px;
+}
+.agreement {
+  display: flex;
+  gap: 5px;
+}
+.input-footer {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(241, 241, 227);
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.button-footer {
+  border: none;
+  width: 300px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  height: 40px;
+  background-color: #1e3b22;
+  color: white;
+}
+.button-footer:hover {
+  background-color: white;
+  color: #1e3b22;
+  border: 1px solid gray;
+}
+.agree-foot {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .myCart {
+    order: -1;
+  }
+}
+@media screen and (max-width: 900px) {
+  .left-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+  }
+  .button-footer {
+    width: 280px;
+  }
+
+  .right-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .connectwith {
+    width: 200px;
+  }
+
+  .left-carter {
+    font-size: 25px;
+    margin-right: 70px;
+    width: 200px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+}
