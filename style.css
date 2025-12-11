@@ -727,7 +727,7 @@ footer {
     height: 40vh;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .booklesson h1 {
     font-size: 30px;
   }
